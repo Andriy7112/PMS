@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PMS_lab</string>
+    <string name="title_student">Student</string>
+    <string name="title_graphic">Graphic</string>
+    <string name="title_movies">Movies</string>
+    <string name="no_movies_found">No result</string>
+    <string name="title">title</string>
+    <string name="year">year</string>
+    <string name="imdbid">imdbID</string>
+    <string name="type">type</string>
+    <string name="title1">Title:</string>
+    <string name="genre1">Genre:</string>
+    <string name="actors1">Actors:</string>
+    <string name="language1">Language:</string>
+    <string name="production1">Production:</string>
+    <string name="released1">Released:</string>
+    <string name="runtime1">Runtime:</string>
+    <string name="rating1">Rating:</string>
+    <string name="director1">Director:</string>
+    <string name="country1">Country:</string>
+    <string name="awards1">Awards:</string>
+    <string name="plot1">Plot:</string>
+    <string name="year1">Year:</string>
+    <string name="writer">Writer:</string>
+    <string name="votes">Votes:</string>
+    <string name="rated">Rated:</string>
+    <string name="add_icon_for_button">\'Add\' icon for button</string>
+    <string name="delete">Delete</string>
+</resources>
