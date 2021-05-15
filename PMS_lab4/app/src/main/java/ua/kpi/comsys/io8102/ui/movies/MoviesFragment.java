@@ -82,7 +82,7 @@ public class MoviesFragment extends Fragment {
                                                   @Override
                                                   public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                                                      Movie item = moviesList.getMovieByPosition(position);
+                                                      Movie item = adapterMoviesList.movies.get(position);
                                                       parseFromTxt(item.getImdbID(), item);
 
                                                       Intent intent = new Intent(view.getContext(), MovieDetailsActivity.class);
@@ -110,6 +110,7 @@ public class MoviesFragment extends Fragment {
         );
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
             @Override
             public boolean onQueryTextSubmit(String s) {
                 return false;
@@ -168,16 +169,20 @@ public class MoviesFragment extends Fragment {
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         AdapterView.AdapterContextMenuInfo menuInfo =
                 (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        int selectedItemIndex = (int) adapterMoviesList.getItemId(menuInfo.position);
 
         if (item.getItemId() == R.id.option_delete) {
-            String title = moviesList.getMovies().get(selectedItemIndex).getTitle();
+            movies.remove(adapterMoviesList.movies.get(menuInfo.position));
+            moviesList.getMovies().remove(adapterMoviesList.movies.get(menuInfo.position));
+            adapterMoviesList.movies.remove(adapterMoviesList.movies.get(menuInfo.position));
+            adapterMoviesList.update();
 
-            movies.remove(selectedItemIndex);
-            moviesList.getMovies().remove(selectedItemIndex);
-            adapterMoviesList.update(movies);
-
-
+            if (adapterMoviesList.movies.size() == 0) {
+                moviesListView.setVisibility(View.GONE);
+                noResults.setVisibility(View.VISIBLE);
+            } else {
+                noResults.setVisibility(View.GONE);
+                moviesListView.setVisibility(View.VISIBLE);
+            }
 
             return true;
         }

@@ -72,8 +72,12 @@ public class AdapterMoviesList extends ArrayAdapter<String> {
     }
 
     public void update(ArrayList<Movie> results) {
-        movies = new ArrayList<>();
-        movies.addAll(results);
+            movies = new ArrayList<>();
+            movies.addAll(results);
+            notifyDataSetChanged();
+    }
+
+    public void update() {
         notifyDataSetChanged();
     }
 

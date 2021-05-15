@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:imeOptions="flagNoExtractUi"
+    android:layout_marginBottom="?attr/actionBarSize"
     tools:context=".ui.movies.MoviesFragment">
 
     <LinearLayout
