@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_student">
+
+    <fragment
+        android:id="@+id/navigation_student"
+        android:name="ua.kpi.comsys.io8102.ui.student.StudentFragment"
+        android:label="@string/title_student"
+        tools:layout="@layout/fragment_student" />
+
+    <fragment
+        android:id="@+id/navigation_graphic"
+        android:name="ua.kpi.comsys.io8102.ui.graphic.GraphicFragment"
+        android:label="@string/title_graphic"
+        tools:layout="@layout/fragment_graphic" />
+
+    <fragment
+        android:id="@+id/navigation_movies"
+        android:name="ua.kpi.comsys.io8102.ui.movies.MoviesFragment"
+        android:label="@string/title_movies"
+        tools:layout="@layout/fragment_movies" />
+
+    <fragment
+        android:id="@+id/navigation_gallery"
+        android:name="ua.kpi.comsys.io8102.ui.gallery.GalleryFragment"
+        android:label="@string/title_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+</navigation>

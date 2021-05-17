@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.movies.MovieDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="132dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView_poster"
+                android:layout_width="134dp"
+                android:layout_height="161dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                app:srcCompat="@android:drawable/ic_media_play" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/titleLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/yearLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/year1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_year"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/genreLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/genre1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_genre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/directorLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/director1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_director"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/writerLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/writer"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_writer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/actorsLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/actors1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_actors"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/countryLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/country1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_country"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/languageLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/language1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_language"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/productionLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/production1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_production"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/releasedLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/released1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_released"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/runtimeLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/runtime1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_runtime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ratingLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/rating1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_rating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/votesLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/votes"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_votes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ratedLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/rated"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_rated"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/awardsLabel"
+                    android:layout_width="77dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/awards1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_awards"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/plot_label"
+                    android:layout_width="77dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plot1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_plot"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
