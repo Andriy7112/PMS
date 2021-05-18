@@ -69,7 +69,7 @@ public class GalleryFragment extends Fragment {
                 List<String> tempImageList = new ArrayList<>();
                 result.add(tempImageList);
             }
-            if (result.get(result.size() - 1).size() >= 8) {
+            if (result.get(result.size() - 1).size() >= 6) {
                 List<String> tempImageList = new ArrayList<>();
                 tempImageList.add(obj);
                 result.add(tempImageList);
@@ -157,7 +157,7 @@ public class GalleryFragment extends Fragment {
                             List<String> tempImageList = new ArrayList<>();
                             currentImgs.add(tempImageList);
                         }
-                        if (currentImgs.get(currentImgs.size()-1).size()>=8){
+                        if (currentImgs.get(currentImgs.size()-1).size()>=6){
                             List<String> tempImageList = new ArrayList<>();
                             tempImageList.add(newImageName);
                             currentImgs.add(tempImageList);
@@ -226,8 +226,6 @@ public class GalleryFragment extends Fragment {
             imageViews.add(row.findViewById(R.id.gal_img4));
             imageViews.add(row.findViewById(R.id.gal_img5));
             imageViews.add(row.findViewById(R.id.gal_img6));
-            imageViews.add(row.findViewById(R.id.gal_img7));
-            imageViews.add(row.findViewById(R.id.gal_img8));
 
             List<ProgressBar> progressBars = new ArrayList<>();
             progressBars.add(row.findViewById(R.id.load1));
@@ -236,12 +234,10 @@ public class GalleryFragment extends Fragment {
             progressBars.add(row.findViewById(R.id.load4));
             progressBars.add(row.findViewById(R.id.load5));
             progressBars.add(row.findViewById(R.id.load6));
-            progressBars.add(row.findViewById(R.id.load7));
-            progressBars.add(row.findViewById(R.id.load8));
 
             int imgNumber = taskImg.get(position).size();
 
-            for (int i=0; i<8; i++){
+            for (int i=0; i<6; i++){
                 try {
                     if (i<imgNumber){
                         LoadImage handler = new LoadImage(imageViews.get(i), generalAct, position, getContext(), taskImg.get(position).get(i));
