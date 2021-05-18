@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_student"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/title_student" />
+
+    <item
+        android:id="@+id/navigation_graphic"
+        android:icon="@drawable/ic_baseline_pie_chart_24"
+        android:title="@string/title_graphic" />
+
+    <item
+        android:id="@+id/navigation_movies"
+        android:icon="@drawable/ic_baseline_local_movies_24"
+        android:title="@string/title_movies" />
+
+    <item
+        android:id="@+id/navigation_gallery"
+        android:icon="@drawable/ic_gallery"
+        android:title="@string/title_gallery" />
+
+</menu>
