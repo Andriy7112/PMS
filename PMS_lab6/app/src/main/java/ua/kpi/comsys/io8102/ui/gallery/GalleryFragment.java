@@ -5,9 +5,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.Display;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.view.LayoutInflater;
@@ -16,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import androidx.annotation.Dimension;
 import androidx.fragment.app.Fragment;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,11 +44,24 @@ public class GalleryFragment extends Fragment {
     String REQUEST = "\"small+animals\"";
     String imageUrlTarget="\"webformatURL\":\"";
     URL url;
+    LinearLayout layout;
+    View elemSet;
+    int width;
+    int height;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.fragment_gallery, container, false);
+        elemSet = inflater.inflate(R.layout.image_collection, container, false);
+
+        Display screensize = getActivity().getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        screensize.getSize(size);
+        width = size.x;
+        height = size.y;
+
+
         listView = root.findViewById(R.id.imagesList);
 
         try {
@@ -58,7 +75,7 @@ public class GalleryFragment extends Fragment {
         return root;
     }
 
-    static class GalleryAdapter extends ArrayAdapter<List<String>> {
+    class GalleryAdapter extends ArrayAdapter<List<String>> {
         private final List<List<String>> taskImg;
         Activity generalAct;
 
@@ -73,6 +90,12 @@ public class GalleryFragment extends Fragment {
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             @SuppressLint("ViewHolder") View row = inflater.inflate(R.layout.image_collection, parent, false);
+
+            layout = row.findViewById(R.id.gallery_layout);
+            ViewGroup.LayoutParams params = layout.getLayoutParams();
+            params.height = (int)(width*0.8);
+            params.width = width;
+            layout.setLayoutParams(params);
 
             List<ImageView> imageViews = new ArrayList<>();
             imageViews.add(row.findViewById(R.id.gal_img1));
